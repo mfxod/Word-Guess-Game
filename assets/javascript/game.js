@@ -1,7 +1,7 @@
 // --- USER GUESS LOOP ---
 // document.onkeyup = function(event) {
 //     if (userGuess is in wordArr) {
-//         replace the corresponding _(s) in blankArr with userGuess
+//         replace the corresponding _(s) in blankArr with              userGuess
 //         maybe use forEach()?
 //         then guessCounter--
 //     } else {
@@ -27,11 +27,11 @@
 // convert userGuess and wordBank words with .toLowerCase()?
 
 var wins = 0;
-var wordBank = ["John", "Paul", "George", "Ringo"];
+var wordBank = ["John", "George", "Ringo"];
 var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 var wordArr = word.split("");
 var blankArr = [];
-var userGuess = "";
+var userGuess = [];
 var guessCounter = 12;
 var wrongGuesses = [];
 var lettersLeft = word.length;
@@ -64,7 +64,10 @@ function guessLoop() {
 }
 
 document.onkeyup = function(event) {
-    userGuess = event.key;
+    showBlankArr()
+    var guess = event.key;
+    userGuess.push(guess);
     guessLoop();
+    console.log(userGuess);
     guessCounter--;
 }
