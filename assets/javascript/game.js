@@ -1,13 +1,13 @@
 // --- USER GUESS LOOP ---
 // document.onkeyup = function(event) {
 //     if (userGuess is in wordArr) {
-//         replace the corresponding _(s) in blankArr with              userGuess
+//         replace the corresponding _(s) in blankArr with userGuess
 //         maybe use forEach()?
-//         then guessCounter--
+//         guessCounter--
 //     } else {
 //         add userGuess to wrongGuesses
 //         no duplicates in wrongGuesses
-//         then guessCounter--
+//         guessCounter--
 //     }
 // }
 
@@ -27,7 +27,7 @@
 // convert userGuess and wordBank words with .toLowerCase()?
 
 var wins = 0;
-var wordBank = ["John", "George", "Ringo"];
+var wordBank = ["John", "Paul", "George", "Ringo"];
 var word = wordBank[Math.floor(Math.random() * wordBank.length)];
 var wordArr = word.split("");
 var blankArr = [];
